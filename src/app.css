@@ -1,0 +1,178 @@
+.app{
+    height: 100vh;
+    display: flex;
+    background-color: #020230;
+    color: white;
+}
+.main{
+    width: 75%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), #020230 ), url("./images/bg.jpg") center;
+}
+.pyramid{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.moneyList{
+    list-style: none;
+    width: 100%;
+    padding: 20px;
+}
+.moneyListItem{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+.moneyItemList,.active{
+    background-color: teal;
+}
+.moneyListItemNumber{
+    font-family: 18px;
+    font-weight: 100;
+    width: 30%;
+}
+.moneyListItemAmount{
+    font-size: 20px;
+    font-weight: 300;
+
+}
+.top{
+    height: 50%;
+    position: relative;
+}
+.timer{
+    width: 70px;
+    height: 70px;
+    border: 5px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 10px;
+    left: 100px;
+     
+}
+.bottom{
+    height: 50%;
+}
+.trivia {
+    height:  100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.question{
+    width: 80%;
+    background: linear-gradient(#100241, black);
+    border: 2px solid white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.anwser{
+    width:  40%;
+    padding: 10px;
+    text-align: center;
+    background: linear-gradient(#0e0124, #22074d); 
+    border:  1px solid white;
+    border-radius:  15px;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0 10px 20px 10px;
+    
+
+}
+ .anwser:hover, 
+ .anwser.active {
+    background: mediumblue;
+ }
+ .anwser.corect{
+     animation: corect 3s ease forwards;
+     
+ }
+ @keyframes corect {
+     0%,
+     22%,
+     42%{
+         background: mediumblue;
+         
+     }
+     20%,
+     40%,
+     60%{
+         background: linear-gradient(#0e0124, #22074d) ;
+     }
+     62%,
+     100%{
+         background: green;
+     }
+
+ }
+ .anwser.wrong{
+    animation: wrong 3s ease forwards;
+    
+}
+@keyframes wrong {
+    0%,
+    22%,
+    42%{
+        background: mediumblue;
+        
+    }
+    20%,
+    40%,
+    60%{
+        background: linear-gradient(#0e0124, #22074d) ;
+    }
+    62%,
+    100%{
+        background: crimson;
+    }
+
+}
+.anwsers{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+
+}
+.endText{
+    position:relative;
+    top:50%;
+    bottom:0;
+    left:40%;
+    right:0;
+    
+}
+.start{
+    width: 250px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    
+}
+.formStart{
+    width: 250px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+}
